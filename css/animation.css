@@ -1,0 +1,249 @@
+.kotakRandom1 {
+    position: fixed;
+    height: 10px;
+    width: 20px;
+    z-index: 15;
+    left: 100px;
+    background-color: #007bff;
+    top: 100px;
+    animation-name: kotak1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak1 {
+    0% {
+        height: 10px;
+        width: 20px;
+        left: 100px;
+        background-color: #007bff;
+        top: 100px;
+    }
+    40% {
+        height: 10px;
+        width: 20px;
+        background-color: #007bff;
+        left: 100px;
+        top: 100px;
+    }
+    50% {
+        height: 10px;
+        width: 20px;
+        left: 200px;
+        top: 10%;
+        background-color: white;
+    }
+    60% {
+        height: 10px;
+        width: 20px;
+        background-color: #007bff;
+        left: 100px;
+        top: 100px;
+    }
+}
+.kotakRandom2 {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: #007bff;
+    z-index: 15;
+    left: 20%;
+    border-radius: 100rem;
+    bottom: 10%;    
+    animation-name: kotak2;
+    animation-duration: 9s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak2 {
+    0% {
+        height: 30px;
+        width: 30px;
+        background-color: #007bff;
+        left: 20%;
+        border-radius: 100rem;
+        bottom: 10%;   
+    }
+    40% {
+        height: 30px;
+        width: 30px;
+        background-color: #007bff;
+        left: 20%;
+        border-radius: 100rem;
+        bottom: 10%;   
+    }
+    50% {
+        left: 10%;
+        bottom: 20%;
+        height: 40px;
+        width: 50px;
+    }
+    60% {
+        height: 30px;
+        width: 30px;
+        background-color: #007bff;
+        left: 20%;
+        border-radius: 100rem;
+        bottom: 10%;   
+    }
+}
+.kotakRandom3 {
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    z-index: 15;
+    left: 30%;
+    top: 10%;    
+    background-color: white !important;
+    animation-name: kotak3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+}
+.kotakRandom4 {
+    position: fixed;
+    height: 7px;
+    width: 35px;
+    background-color: #007bff;
+    z-index: 15;
+    left: 54%;
+    top: 60%;    
+    animation-name: kotak4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak4 {
+    0% {
+        left: 54%;
+        top: 60%;   
+    }
+    50% {
+        left: 60%;
+        top: 60%;
+    }
+}
+.kotakRandom5 {
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    background-color: #007bff;
+    z-index: 15;
+    left: 40%;
+    top: 100px;
+    animation-name: kotak5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak5 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+.kotakRandom6 {
+    background-color: #007bff;
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    z-index: 15;
+    left: 66%;
+    border-radius: 100rem;
+    top: 75%;    
+}
+.kotakRandom7 {
+    position: fixed;
+    height: 5px;
+    width: 40px;
+    z-index: 15;
+    top: 80%;
+    left: 90%;
+    animation-name: kotak7;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak7 {
+    0% {
+        top: 80%;
+        left: 90%;  
+    }
+    50% {
+        top: 60%;
+        left: 90%;
+    }
+}
+.kotakRandom8 {
+    position: fixed;
+    height: 50px;
+    background-color: white !important;
+    width: 10px;
+    z-index: 15;
+    left: 90%;
+    transform: rotate(45deg);
+    top: 10%;    
+    animation-name: kotak8;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak8 {
+    0% {
+        transform: rotate(45deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+.kotakRandom9 {
+    position: fixed;
+    height: 30px;
+    width: 40px;
+    background-color: #007bff;
+    z-index: 15;
+    right: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    bottom: 300px;    
+}
+.kotakRandom10 {
+    position: fixed;
+    height: 40px;
+    background-color: white !important;
+    width: 30px;
+    z-index: 15;
+    right: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    bottom: 40px;   
+}
+.kotakRandom11 {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    z-index: 15;
+    background-color: transparent;
+    left: 20%;
+    top: 55%;    
+    border: 2px solid white;
+    animation-name: kotak11;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes kotak11 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(255, 255, 255, .6);
+        transform: rotate(-45deg);
+    }
+}
