@@ -171,7 +171,7 @@
                     <div class="small-block bg-primary position-absolute"></div>
                     <div class="line-bottom-header position-absolute"></div>
                 </div>
-                <h1 style="font-size: 4rem !important;" class="user-caption">"Just Do It... Later"</h1>
+                <h1 style="font-size: 4rem !important;" class="user-caption-small">"Just Do It... Later"</h1>
             </div>
         </div>
     </div>
@@ -346,32 +346,32 @@
             profesiSmall('Data Analytics SideScript Developer')
             $('.line-bottom-header').addClass('w-100')
             $('.small-block').addClass('small-block-move')
-            $('.user-caption').addClass('user-caption-show')
+            $('.user-caption-small').addClass('user-caption-show')
         }
         function timoutSmall(caption) {
             $('.line-bottom-header').removeClass('w-100')
             $('.small-block').removeClass('small-block-move')
-            $('.user-caption').removeClass('user-caption-show')
+            $('.user-caption-small').removeClass('user-caption-show')
             setTimeout(() => {
                 $('.line-bottom-header').addClass('w-100')
                 $('.small-block').addClass('small-block-move')
-                $('.user-caption').addClass('user-caption-show')
-                $('.user-caption').html(caption)
+                $('.user-caption-small').addClass('user-caption-show')
+                $('.user-caption-small').html(caption)
             }, 1500);
         }
         $('#sliderTeam').on('slid.bs.carousel', function(e) {
             if($('#febriSlide').hasClass('active')) {
                 nameSmall("Febri Brilian Barkah (Kang Mager Pro)")
                 profesiSmall("Data Analytics SideScript Developer")
-                timoutSmall("Just Do It... Later")
+                timoutSmall('"Just Do It... Later"')
             } else if($('#madaSlide').hasClass('active')) {
                 nameSmall("Ade Mada Marshanda (Neng K-Pop)")
                 profesiSmall("Presentator SideScript Developer")
-                timoutSmall("Nothing Caption")
+                timoutSmall('"Nothing Caption"')
             } else {
                 nameSmall("Mohammad Khusnul Khuluq (Ninno)")
                 profesiSmall("Fullstack Programmer SideScript Developer")
-                timoutSmall("No Day Without Coding")
+                timoutSmall('"No Day Without Coding"')
             }
         });
         $('.febri-toggle').mouseover(function() {
