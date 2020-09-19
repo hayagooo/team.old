@@ -15,7 +15,7 @@
 </head>
 <body class="my-bg-dark">
     <div class="kotak-pojok-menu"></div>
-    <div class="container-fluid position-relative my-bg-dark overflow-hidden mb-3">
+    <div id="displayLarge" class="container-fluid position-relative my-bg-dark overflow-hidden mb-3">
         <div class="kotakRandom1"></div>
         <div class="kotakRandom2"></div>
         <div class="kotakRandom3"></div>
@@ -127,31 +127,79 @@
             </div>
         </div>
     </div>
+    <div id="displaySmall">
+        <div class="line-fixed-right"></div>
+        <div class="line-fixed-bottom"></div>
+        <div id="sliderTeam" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators position-fixed w-100 mx-0" style="left: 0; bottom: 5px; z-index: 900;">
+                <li class="teamIcon active" data-target="#sliderTeam" data-slide-to="0" class="active">
+                    <img class="h-100" src="img/febri-avatar.PNG" alt="">
+                </li>
+                <li class="teamIcon" data-target="#sliderTeam" data-slide-to="1">
+                    <img class="h-100" src="img/mada-avatar.PNG" alt="">
+                </li>
+                <li class="teamIcon" data-target="#sliderTeam" data-slide-to="2">
+                    <img class="h-100" src="img/ninno-avatar.png" alt="">
+                </li>
+            </ol>
+            <div class="carousel-inner position-relative" id="carouselTeam" role="listbox">
+                <div class="carousel-item active" id="febriSlide">
+                    <img class="w-100" src="img/febri-sm.png" alt="First slide">
+                </div>
+                <div class="carousel-item" id="madaSlide" >
+                    <img class="w-100" src="img/mada-sm.png" alt="Second slide">
+                </div>
+                <div class="carousel-item" id="ninnoSlide">
+                    <img class="w-100" src="img/ninnoi-sm.png" alt="Third slide">
+                </div>
+                <div class="position-absolute gradient-jumbotron w-100 h-100"></div>
+            </div>
+            <a style="z-index: 900;" class="carousel-control-prev" href="#sliderTeam" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a style="z-index: 900;" class="carousel-control-next" href="#sliderTeam" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="container position-relative text-white pb-5 mb-5">
+            <div class="col-11">
+                <div class="w-100 position-relative py-4 mb-4">
+                    <h1 style="font-size: 3rem !important;" class="mb-1 user-name"></h1>
+                    <p id="user-profesi-sm"></p>
+                    <div class="small-block bg-primary position-absolute"></div>
+                    <div class="line-bottom-header position-absolute"></div>
+                </div>
+                <h1 style="font-size: 4rem !important;" class="user-caption">"Just Do It... Later"</h1>
+            </div>
+        </div>
+    </div>
     <div class="main-submenu position-fixed w-100">
         <div class="backSubmenu"></div>
         <div class="row text-right">
-            <div class="col-md-6 offset-md-6 p-5 mt-5 myMenu">
+            <div class="col-lg-6 offset-lg-6 col-md-7 offset-md-5 p-5 mt-5 myMenu">
                 <div class="px-5 subMenu py-2  mt-4" id="continue-menu">                    
-                    <h1 style="font-size: 4.3rem;">CONTINUE</h1>
+                    <h1 style="font-size: 3.8rem;">CONTINUE</h1>
                 </div>
                 <div class="px-5 subMenu py-2 " id="dev-menu">                    
-                    <h1 style="font-size: 4.3rem;">DEVELOPER</h1>
+                    <h1 style="font-size: 3.8rem;">DEVELOPER</h1>
                 </div>
                 <div class="px-5 subMenu py-2 " id="porto-menu">                    
-                    <h1 style="font-size: 4.3rem;">OUR PORTOFOLIO</h1>
+                    <h1 style="font-size: 3.8rem;">OUR PORTOFOLIO</h1>
                 </div>
                 <div class="px-5 subMenu py-2 " id="archive-menu">                    
-                    <h1 style="font-size: 4.3rem;">OUR ARCHIVEMENT</h1>
+                    <h1 style="font-size: 3.8rem;">OUR ARCHIVEMENT</h1>
                 </div>
             </div>
         </div>
-        <div class="logo-sideScript text-center">
+        <div class="logo-sideScript text-center d-none d-md-inline-block">
             <img src="img/team1.png" class="w-100" alt="">
-            <h1 class="text-primary mt-3" style="font-size: 2.75rem;">SideScript Developer</h1>
+            <h1 class="text-primary mt-3 ssd-textmenu" style="font-size: 2.75rem;">SideScript Developer</h1>
         </div>
     </div>
 
-    <div class="notSupported-display">
+    <div class="notSupported-display d-none">
         <div class="container py-5 my-5">
             <div class="row">
                 <div class="col-md-12 text-white text-center my-5 py-5">
@@ -272,6 +320,60 @@
         .pause('3500')
         .delete(11)
         .go();
+        var nameSmall = function(name) {
+            new TypeIt('.user-name' , {
+                speed: 50,
+                waitUntilVisible: true,
+            })
+            .delete()
+            .type(name)
+            .go()
+        }
+
+        var profesiSmall = function(profesi) {
+            new TypeIt('#user-profesi-sm', {
+                speed: 25,
+                waitUntilVisible: true,
+            }).delete()
+            .type(profesi)
+            .go()
+        }
+        let widthSm = 800;
+        if($(window).width() <= 800) {
+            userName
+            .type('Febri Brilian Barkah (Kang Mager Pro)')
+            .go();
+            profesiSmall('Data Analytics SideScript Developer')
+            $('.line-bottom-header').addClass('w-100')
+            $('.small-block').addClass('small-block-move')
+            $('.user-caption').addClass('user-caption-show')
+        }
+        function timoutSmall(caption) {
+            $('.line-bottom-header').removeClass('w-100')
+            $('.small-block').removeClass('small-block-move')
+            $('.user-caption').removeClass('user-caption-show')
+            setTimeout(() => {
+                $('.line-bottom-header').addClass('w-100')
+                $('.small-block').addClass('small-block-move')
+                $('.user-caption').addClass('user-caption-show')
+                $('.user-caption').html(caption)
+            }, 1500);
+        }
+        $('#sliderTeam').on('slid.bs.carousel', function(e) {
+            if($('#febriSlide').hasClass('active')) {
+                nameSmall("Febri Brilian Barkah (Kang Mager Pro)")
+                profesiSmall("Data Analytics SideScript Developer")
+                timoutSmall("Just Do It... Later")
+            } else if($('#madaSlide').hasClass('active')) {
+                nameSmall("Ade Mada Marshanda (Neng K-Pop)")
+                profesiSmall("Presentator SideScript Developer")
+                timoutSmall("Nothing Caption")
+            } else {
+                nameSmall("Mohammad Khusnul Khuluq (Ninno)")
+                profesiSmall("Fullstack Programmer SideScript Developer")
+                timoutSmall("No Day Without Coding")
+            }
+        });
         $('.febri-toggle').mouseover(function() {
             $('.img-febri').addClass('opacity1 z-index');
             $('#container-febri').addClass('opacity1')

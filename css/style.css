@@ -89,6 +89,10 @@ nav {
     opacity: 0;
     visibility: hidden;
 }
+.bg-image {
+    background-size: cover;
+    background-position: center;
+}
 .mada-img {
     height: 300px;
     overflow: hidden;
@@ -143,6 +147,11 @@ nav {
 .z-index {
     z-index: 100;
 }
+#carouselTeam .carousel-item {
+    height: 700px;
+    left: 0;
+    top: 0;
+}
 .container-detail {
     z-index: 16;
     width: 100%;
@@ -154,6 +163,25 @@ nav {
     transition: all .2s;
     bottom: 0;
     background-color: rgb(19, 33, 51, .8);
+}
+.teamIcon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 40px !important;
+    overflow: hidden;
+    padding: 0px !important;
+    transition: all .3s;
+    border: none !important;
+    margin: 0 10px !important;
+    position: relative;
+    z-index: 1000 !important;
+    display: inline-block;
+    text-indent: 0px !important;
+    background-color: white;
+}
+.teamIcon.active {
+    transition: all .3s;
+    transform: scale(1.2);
 }
 .febri-img {
     width: 200px;
@@ -306,7 +334,7 @@ nav {
     transition: all 3s;
 }
 .backSubmenu-show {
-    left: -10%;
+    left: -15%;
 }
 .subMenu {
     bottom: -100px;
@@ -332,7 +360,7 @@ nav {
 }
 #continue-menu h1::after {
     content: 'CONTINUE';
-    font-size: 4.3rem;
+    font-size: 3.8rem;
     transition: all 1s;
     font-family: header;
     opacity: 0;
@@ -348,7 +376,7 @@ nav {
 }
 #dev-menu h1::after {
     content: 'DEVELOPER';
-    font-size: 4.3rem;
+    font-size: 3.8rem;
     transition: all 1s;
     font-family: header;
     opacity: 0;
@@ -364,7 +392,7 @@ nav {
 }
 #porto-menu h1::after {
     content: 'OUR PORTOFOLIO';
-    font-size: 4.3rem;
+    font-size: 3.8rem;
     transition: all 1s;
     font-family: header;
     opacity: 0;
@@ -380,7 +408,7 @@ nav {
 }
 #archive-menu h1::after {
     content: 'OUR ARCHIVEMENT';
-    font-size: 4.3rem;
+    font-size: 3.8rem;
     transition: all 1s;
     font-family: header;
     opacity: 0;
@@ -615,6 +643,12 @@ nav {
     bottom: 6.8%;
     color: white;
 }
+#displaySmall {
+    display: none;
+}
+#carouselTeam {
+    height: 800px;
+}
 @media screen and (max-width: 1100px) {
     .img-ninno, .img-mada, .img-febri {
         bottom: 0%;
@@ -649,6 +683,15 @@ nav {
         width: 38%;
         left: 29%;
     }
+    .ssd-textmenu  {
+        font-size: 2.3rem !important;
+    }
+    .subMenu h1 {
+        font-size: 2.8rem !important;
+    }
+    .subMenu h1::after {
+        font-size: 2.8rem !important;
+    }
     .img-febri {
         width: 30.3%;
         left: 1.3%;
@@ -674,7 +717,98 @@ nav {
     .notSupported-display {
         display: inline-block;
     }
-    body, html { 
-        overflow: hidden !important;
+    #displaySmall {
+        display: inline-block;
+    }
+    #displayLarge {
+        display: none;
+    }
+    
+    .myMenu {
+        text-align: center;
+    }
+    .subMenu h1:hover::after {
+        right: 5px !important;
+        top: -5px;
+        opacity: 1;
+    } 
+    #continue-menu h1:hover::after {
+        right: 5px;
+        top: -5px;
+        opacity: 1;
+    }
+    .subMenu h1 {
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        position: relative;
+        -webkit-text-stroke-color: black;
+        cursor: pointer;
+    }
+    #continue-menu h1::after {
+        content: 'CONTINUE';
+        font-size: 3.8rem;
+        transition: all 1s;
+        font-family: header;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        color: black;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    #dev-menu h1:hover::after {
+        right: 5px;
+        top: -5px;
+        opacity: 1;
+    }
+    #dev-menu h1::after {
+        content: 'DEVELOPER';
+        font-size: 3.8rem;
+        width: 100%;
+        text-align: center;
+        transition: all 1s;
+        font-family: header;
+        opacity: 0;
+        color: black;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    #porto-menu h1:hover::after {
+        right: 5px;
+        top: -5px;
+        opacity: 1;
+    }
+    #porto-menu h1::after {
+        content: 'OUR PORTOFOLIO';
+        font-size: 3.8rem;
+        transition: all 1s;
+        font-family: header;
+        opacity: 0;
+        width: 100%;
+        text-align: center;
+        color: black;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    #archive-menu h1:hover::after {
+        right: 5px;
+        top: -5px;
+        opacity: 1;
+    }
+    #archive-menu h1::after {
+        content: 'OUR ARCHIVEMENT';
+        font-size: 3.8rem;
+        transition: all 1s;
+        width: 100%;
+        text-align: center;
+        font-family: header;
+        opacity: 0;
+        color: black;
+        position: absolute;
+        right: 0px;
+        top: 0px;
     }
 }
